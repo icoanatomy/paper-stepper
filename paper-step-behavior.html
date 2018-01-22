@@ -39,12 +39,11 @@ window.Stepper = window.Stepper || {};
         value: false
       },
       /**
-       * Missing Doc
+       * Missing Doc; XXX: TODO: shoul start from 1!
        */
       index: {
         type: Number,
-        notify: true,
-        readOnly: true
+        notify: true
       },
       /**
        * Missing Doc
@@ -99,6 +98,10 @@ window.Stepper = window.Stepper || {};
       '_forwardLabelElementProp("saved", saved, labelElement)',
       '_forwardLabelElementProp("disabled", disabled, labelElement)'
     ],
+      
+    _setIndex:function(c){
+      this.index=c;
+    },
 
     _forwardLabelElementProp: function(prop, value, labelElement) {
       // use this.set ?
